@@ -206,5 +206,17 @@ def get_errors():
     with open('json_data/total_accessiblity_issues.json', 'w') as accessibility_file:
         accessibility_file.write(json.dumps(master_data))
 
+
+def read_error_data():
+    with open('json_data/error_count_overall.json') as data_file:
+        data = json.load(data_file)
+        del data['error_item_counts']
+        del data['error_counts']
+        mod_data = data['error_item_description']
+        pprint.pprint(mod_data, depth=2)
+        with open('error_item_description.json', 'w') as accessibility_file:
+            accessibility_file.write(json.dumps(mod_data))
+
 if __name__ == "__main__":
-    get_errors()
+    # get_errors()
+    read_error_data()
