@@ -9,7 +9,7 @@ seed_urls = ["google.com", "facebook.com", "amazon.com", "youtube.com", "yahoo.c
 
 # get WebAim accessiblity issues for seed urls
 def get_errors():
-    api_key = 'iG9n849B351'
+    api_key = ''
     errors = {}
     errors_item_count = {}
     error_item_description = {}
